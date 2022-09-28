@@ -1,2 +1,7 @@
+const { ipcRenderer } = require('electron');
 
-console.log('ola');
+let linkSobre = document.querySelector('#link-sobre');
+
+linkSobre.addEventListener('click', () => {
+    ipcRenderer.send('abrir-janela-sobre');
+});
